@@ -7,7 +7,7 @@ app.use('/places', require('./controllers/places'))
 
 //Create HomePage route
 app.get('/', (req, res) => {
-    res.send('Hello world!')
+    res.send('Lets build this website!')
 })
 
 app.get('*', (req, res) => {
