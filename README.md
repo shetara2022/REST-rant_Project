@@ -4,7 +4,7 @@
 
 * *As a customer, I need to be able to share my local restaurant experiences so that others will know if its worth trying out!* * 
 
-**Routes**
+#### Routes
 
 | Method    | Path                    | Purpose                                        |
 |:---------:|:-----------------------:|:----------------------------------------------:|
@@ -19,3 +19,14 @@
 | POST      | /places/:id/rant        | Create a rant (comment)about a particular place|
 | DELETE    | /places/:id/rant/:rantId| Delete a rant(comment) about a particular place|
 | GET       |          *              | 404 page (matches any route not defined above) |
+
+
+#### Restaurant Data
+
+| Field     | Type          | 
+|:---------:|:-------------:|
+|  name     |   string      | 
+|  city     |   string      | 
+|  state    |   string      | 
+|  cuisines |   string      | 
+|  picture  |   string      | 
