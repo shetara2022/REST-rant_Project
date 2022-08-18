@@ -1,12 +1,15 @@
+//Modules and Globals
 require('dotenv').config()
 
 //Initialize express app variable 
 const express = require('express')
 const app = express()
 
-//Defines the JSX view engine
+//Defines the JSX view engine. These are the Express Settings 
+//app.set('views', _dirname + '/views)
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
+app.use(express.static('public'))
 
 
 app.use('/places', require('./controllers/places'))
