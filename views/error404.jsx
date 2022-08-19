@@ -10,6 +10,13 @@ function error404() {
             <main>
                 <h1>404: PAGE NOT FOUND</h1>
                 <p>Oops, sorry. We can't find this page!</p>
+                <div>
+                    <img src = "/images/cute404.jpeg" alt = "Pixar 404"/>
+                
+                <div>
+                        Photo by: <a href="https://www.pixar.com/404"></a>
+                    </div>
+                </div>
             </main>
         </Def>
     )
