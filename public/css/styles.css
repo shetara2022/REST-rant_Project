@@ -11,4 +11,40 @@ h1 {
     width:500px;
     height:500px;
   }
+
+  nav{
+    background-color: blue;
+    padding: 10px;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 25px;
+    
+  }
+
+  nav a {
+    color: whitesmoke;
+    font-size: 1.5em;
+  }
+
+  nav a:hover{
+    color: green;
+    text-decoration: none;
+  }
+  
+  body {
+    background-color: lightblue;
+    text-align: center;
+  }
+  
+  main {
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: white;
+  }
   
