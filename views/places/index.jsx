@@ -2,11 +2,10 @@
 const React = require('react')
 const Def = require('../default')
 
-
 //Create a 'index' stub function then export it
 //Then, use def component from default.jsx as a wrapper for stub home page code
 function index(data) { 
-    let placesFormatted = data.places.map((place, index) => {
+    let placesFormatted = data.places.map((place) => {
         return (
           <div className="col-sm-6">
             <h2>
