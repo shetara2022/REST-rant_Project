@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&family=Edu+NSW+ACT+Foundation&family=Mouse+Memoirs&family=Rampart+One&family=Saira:wght@100;400&display=swap');
+
 h1 {
     text-align: center;
     color: cornflowerblue;
@@ -5,6 +7,12 @@ h1 {
     font-size: 5em;
     text-decoration-line: overline;
     text-decoration-color: red;
+  }
+
+  h2 {
+   font-family: 'Mouse Memoirs', sans-serif;
+   color:rgb(225, 92, 92);
+   font-size: 2.5em;
   }
 
   .cover {
@@ -48,3 +56,8 @@ h1 {
     background-color: white;
   }
   
+  label{
+    font-family: 'Saira', sans-serif;
+    color:blue;
+    
+  }
