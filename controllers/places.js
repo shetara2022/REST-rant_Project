@@ -4,7 +4,6 @@ const db = require('../models')
 
 //Index
 router.get('/', (req, res) => {
-    //res.render('places/index', { places })
     db.Place.find()
         .then((places) => {
             res.render('places/index', { places })
@@ -103,22 +102,47 @@ router.get('/:id/edit', (req, res) => {
     }
 })
 
-
-
-//Delete route
-router.delete('/:id', (req, res) => {
-    let id = Number(req.params.id)
-    if (isNaN(id)) {
+router.post('/:id/comment', (req, res) => {
+    console.log(req.body)
+    req.body.rant = req.body.rant ? true : false
+    db.Place.findById(req.params.id)
+    .then(place => {
+        db.Comment.create(req.body)
+        .then(comment => {
+            place.comments.push(comment.id)
+            place.save()
+            .then(() => {
+                res.redirect(`/places/${req.params.id}`)
+            })
+        })
+        .catch(err => {
+            res.render('error404')
+        })
+    })
+    .catch(err => {
         res.render('error404')
-    }
-    else if (!places[id]) {
-        res.render('error404')
-    }
-    else {
-        places.splice(id, 1)
-        res.redirect('/places')
-    }
+    })
 })
 
 
-module.exports = router
+
+
+
+    //Delete route
+    router.delete('/:id', (req, res) => {
+        let id = Number(req.params.id)
+        if (isNaN(id)) {
+            res.render('error404')
+        }
+        else if (!places[id]) {
+            res.render('error404')
+        }
+        else {
+            places.splice(id, 1)
+            res.redirect('/places')
+        }
+    })
+
+
+    module.exports = router
+
